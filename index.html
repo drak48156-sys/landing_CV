@@ -17,8 +17,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
     <header class="hero">
-      <nav class="nav container">
+      <nav class="nav container reveal">
         <div class="brand">Fabrissio.dev</div>
         <div class="nav-links">
           <a href="#sobre-mi">Sobre mí</a>
@@ -29,7 +34,7 @@
       </nav>
 
       <section class="hero-content container">
-        <div class="hero-copy">
+        <div class="hero-copy reveal reveal-delay-1">
           <p class="eyebrow">Portfolio · CV Landing</p>
           <h1>Jorge Fabrissio Pino Abril</h1>
           <p class="hero-subtitle">
@@ -47,7 +52,7 @@
           </ul>
         </div>
 
-        <aside class="hero-card">
+        <aside class="hero-card reveal reveal-delay-2 floating-card">
           <span class="status-dot"></span>
           <p class="card-label">Perfil profesional</p>
           <h2>Desarrollo web + IA</h2>
@@ -58,7 +63,7 @@
           <div class="contact-list">
             <a href="tel:+519373953614">+51 937 395 614</a>
             <a href="mailto:jorgeabril.pino@gmail.com">jorgeabril.pino@gmail.com</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/pendiente" target="_blank" rel="noreferrer">LinkedIn, pendiente de confirmar</a>
             <a href="https://github.com/drak48156-sys" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </aside>
@@ -66,12 +71,12 @@
     </header>
 
     <main>
-      <section id="sobre-mi" class="section container two-column">
-        <div>
+      <section id="sobre-mi" class="section container two-column reveal-block">
+        <div class="reveal">
           <p class="section-tag">Sobre mí</p>
           <h2>Perfil con base técnica y orientación a ejecución</h2>
         </div>
-        <div>
+        <div class="reveal reveal-delay-1">
           <p>
             Soy estudiante de quinto ciclo de la carrera de Diseño y Desarrollo de Software en
             Tecsup, perteneciente al décimo superior. Me enfoco en desarrollo web e inteligencia
@@ -88,10 +93,10 @@
 
       <section id="skills" class="section section-dark">
         <div class="container">
-          <p class="section-tag">Skills</p>
-          <h2>Stack y herramientas</h2>
+          <p class="section-tag reveal">Skills</p>
+          <h2 class="reveal reveal-delay-1">Stack y herramientas</h2>
           <div class="skills-grid">
-            <article class="skill-card">
+            <article class="skill-card reveal">
               <h3>Lenguajes</h3>
               <ul>
                 <li>Python</li>
@@ -101,7 +106,7 @@
                 <li>JavaScript</li>
               </ul>
             </article>
-            <article class="skill-card">
+            <article class="skill-card reveal reveal-delay-1">
               <h3>Frameworks</h3>
               <ul>
                 <li>React</li>
@@ -110,7 +115,7 @@
                 <li>Laravel</li>
               </ul>
             </article>
-            <article class="skill-card">
+            <article class="skill-card reveal reveal-delay-2">
               <h3>Bases de datos</h3>
               <ul>
                 <li>PostgreSQL</li>
@@ -119,7 +124,7 @@
                 <li>SQLite</li>
               </ul>
             </article>
-            <article class="skill-card">
+            <article class="skill-card reveal reveal-delay-3">
               <h3>Herramientas</h3>
               <ul>
                 <li>Docker</li>
@@ -135,10 +140,10 @@
       </section>
 
       <section id="proyectos" class="section container">
-        <p class="section-tag">Experiencia destacada</p>
-        <h2>Trabajo académico con liderazgo y foco en producto</h2>
+        <p class="section-tag reveal">Experiencia destacada</p>
+        <h2 class="reveal reveal-delay-1">Trabajo académico con liderazgo y foco en producto</h2>
         <div class="timeline">
-          <article class="timeline-item">
+          <article class="timeline-item reveal reveal-delay-2">
             <div class="timeline-date">Set. 2025 · Nov. 2025</div>
             <div class="timeline-content">
               <h3>Proyecto Convento Santa Teresa · Tecsup</h3>
@@ -168,7 +173,7 @@
 
       <section class="section section-accent">
         <div class="container split-highlight">
-          <div>
+          <div class="reveal">
             <p class="section-tag">Formación</p>
             <h2>Tecsup · Décimo superior</h2>
             <p>
@@ -177,19 +182,19 @@
             </p>
           </div>
           <div class="stat-grid">
-            <div class="stat-card">
+            <div class="stat-card reveal">
               <strong>5to ciclo</strong>
               <span>Formación actual</span>
             </div>
-            <div class="stat-card">
+            <div class="stat-card reveal reveal-delay-1">
               <strong>Top 10%</strong>
               <span>Décimo superior</span>
             </div>
-            <div class="stat-card">
+            <div class="stat-card reveal reveal-delay-2">
               <strong>Web + IA</strong>
               <span>Enfoque principal</span>
             </div>
-            <div class="stat-card">
+            <div class="stat-card reveal reveal-delay-3">
               <strong>Scrum + Git</strong>
               <span>Trabajo colaborativo</span>
             </div>
@@ -198,9 +203,9 @@
       </section>
 
       <section class="section container">
-        <p class="section-tag">Estudios y actividades complementarias</p>
+        <p class="section-tag reveal">Estudios y actividades complementarias</p>
         <div class="cards-grid">
-          <article class="info-card">
+          <article class="info-card reveal">
             <h3>Cisco Networking Academy</h3>
             <ul>
               <li>PCAP – Programming Essentials in Python</li>
@@ -208,18 +213,18 @@
               <li>Get Connected</li>
             </ul>
           </article>
-          <article class="info-card">
+          <article class="info-card reveal reveal-delay-1">
             <h3>BIG School</h3>
             <p>Desarrollo con IA: de 0 a producción · Marzo 2026</p>
           </article>
-          <article class="info-card">
+          <article class="info-card reveal reveal-delay-2">
             <h3>Hackathon Perú Hub Digital</h3>
             <p>
               Participación representando a Tecsup en una hackathon de ciberseguridad, proponiendo
               una solución orientada a la prevención de fraudes en dispositivos móviles.
             </p>
           </article>
-          <article class="info-card">
+          <article class="info-card reveal reveal-delay-3">
             <h3>Claude in Action</h3>
             <p>
               Desarrollo del módulo Claude in Action, explorando la aplicación práctica de Claude
@@ -230,7 +235,7 @@
       </section>
 
       <section id="contacto" class="section container contact-panel">
-        <div>
+        <div class="reveal">
           <p class="section-tag">Contacto</p>
           <h2>¿Quieres trabajar conmigo o ver más de mi perfil?</h2>
           <p>
@@ -238,13 +243,16 @@
             pueda seguir creciendo como desarrollador.
           </p>
         </div>
-        <div class="contact-box">
+        <div class="contact-box reveal reveal-delay-1">
           <a href="mailto:jorgeabril.pino@gmail.com">jorgeabril.pino@gmail.com</a>
           <a href="tel:+519373953614">+51 937 395 614</a>
           <span>Arequipa, Perú</span>
           <a href="https://github.com/drak48156-sys" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/pendiente" target="_blank" rel="noreferrer">LinkedIn, pendiente de confirmar</a>
         </div>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
