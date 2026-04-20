@@ -23,8 +23,18 @@
     <div class="bg-orb orb-2" aria-hidden="true"></div>
     <div class="brand-mark" aria-hidden="true">
       <div class="brand-mark-ring"></div>
-      <div class="brand-mark-core front-face">F</div>
-      <div class="brand-mark-core side-face">JP</div>
+      <svg class="wolf-mark wolf-front" viewBox="0 0 300 300" aria-hidden="true">
+        <path d="M88 78 128 28l20 42 24-42 40 50 38 26-24 10-4 98-72 50-72-50-4-98-24-10 38-26Z" />
+        <path d="M118 136c10-4 18 2 22 10 4-8 12-14 22-10 10 4 10 18 2 28-8 10-16 18-24 26-8-8-16-16-24-26-8-10-8-24 2-28Z" class="wolf-inner" />
+        <circle cx="118" cy="122" r="8" class="wolf-eye" />
+        <circle cx="182" cy="122" r="8" class="wolf-eye" />
+      </svg>
+      <svg class="wolf-mark wolf-side" viewBox="0 0 320 320" aria-hidden="true">
+        <path d="M76 200 110 78l48-44 34 34 42 4 26 26-28 18 12 34-34 4-20 22-10 54-44-16-26 30-10-48-40-18 22-18Z" />
+        <path d="M188 108c16 0 26 10 26 22 0 12-10 22-26 22-10 0-20-6-24-14l8-8c4 6 10 10 16 10 8 0 14-4 14-10 0-6-6-10-14-10-8 0-12 2-18 6l-8-8c8-6 16-10 26-10Z" class="wolf-inner" />
+        <circle cx="202" cy="116" r="7" class="wolf-eye" />
+      </svg>
+      <div class="brand-mark-caption">JP · Wolf Mark</div>
     </div>
 
     <header class="hero">
@@ -100,45 +110,106 @@
         <div class="container">
           <p class="section-tag reveal">Skills</p>
           <h2 class="reveal reveal-delay-1">Stack y herramientas</h2>
-          <div class="skills-grid">
+          <div class="skills-grid icon-skills-grid">
             <article class="skill-card reveal">
               <h3>Lenguajes</h3>
-              <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>SQL</li>
-                <li>HTML / CSS</li>
-                <li>JavaScript</li>
-              </ul>
+              <div class="icon-list">
+                <a class="icon-chip" href="#" aria-label="Python, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                  <span>Python</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="Java, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+                  <span>Java</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="SQL, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+                  <span>SQL</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="HTML, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+                  <span>HTML</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="CSS, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                  <span>CSS</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="JavaScript, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                  <span>JavaScript</span>
+                </a>
+              </div>
             </article>
             <article class="skill-card reveal reveal-delay-1">
               <h3>Frameworks</h3>
-              <ul>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Django</li>
-                <li>Laravel</li>
-              </ul>
+              <div class="icon-list">
+                <a class="icon-chip" href="#" aria-label="React, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                  <span>React</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="Next.js, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />
+                  <span>Next.js</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="Django, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" />
+                  <span>Django</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="Laravel, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" />
+                  <span>Laravel</span>
+                </a>
+              </div>
             </article>
             <article class="skill-card reveal reveal-delay-2">
               <h3>Bases de datos</h3>
-              <ul>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>MySQL</li>
-                <li>SQLite</li>
-              </ul>
+              <div class="icon-list">
+                <a class="icon-chip" href="#" aria-label="PostgreSQL, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+                  <span>PostgreSQL</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="MongoDB, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                  <span>MongoDB</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="MySQL, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+                  <span>MySQL</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="SQLite, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+                  <span>SQLite</span>
+                </a>
+              </div>
             </article>
             <article class="skill-card reveal reveal-delay-3">
               <h3>Herramientas</h3>
-              <ul>
-                <li>Docker</li>
-                <li>Git / GitHub</li>
-                <li>VS Code</li>
-                <li>Cursor</li>
-                <li>OpenClaw</li>
-                <li>Claude Code</li>
-              </ul>
+              <div class="icon-list">
+                <a class="icon-chip" href="#" aria-label="Docker, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                  <span>Docker</span>
+                </a>
+                <a class="icon-chip" href="https://github.com/jorgeabrilpino-hash" aria-label="GitHub" target="_blank" rel="noreferrer">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                  <span>GitHub</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="VS Code, proyecto futuro">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+                  <span>VS Code</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="Cursor, proyecto futuro">
+                  <img src="https://www.cursor.com/favicon.ico" alt="Cursor" />
+                  <span>Cursor</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="OpenClaw, proyecto futuro">
+                  <span class="fake-icon">🐺</span>
+                  <span>OpenClaw</span>
+                </a>
+                <a class="icon-chip" href="#" aria-label="Claude Code, proyecto futuro">
+                  <span class="fake-icon">✦</span>
+                  <span>Claude Code</span>
+                </a>
+              </div>
             </article>
           </div>
         </div>
