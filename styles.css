@@ -37,24 +37,25 @@ body::before {
     radial-gradient(circle at 20% 20%, rgba(74, 185, 255, 0.16), transparent 24%),
     radial-gradient(circle at 80% 18%, rgba(137, 255, 203, 0.12), transparent 20%),
     radial-gradient(circle at 50% 80%, rgba(102, 227, 255, 0.08), transparent 28%);
-  z-index: -4;
+  z-index: -5;
 }
 
 #bg-canvas,
 .bg-grid,
-.bg-orb {
+.bg-orb,
+.brand-mark {
   position: fixed;
   inset: 0;
   pointer-events: none;
 }
 
 #bg-canvas {
-  z-index: -3;
+  z-index: -4;
   opacity: 0.85;
 }
 
 .bg-grid {
-  z-index: -2;
+  z-index: -3;
   opacity: 0.18;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
@@ -66,6 +67,56 @@ body::before {
 .bg-orb {
   filter: blur(90px);
   z-index: -1;
+}
+
+.brand-mark {
+  z-index: -2;
+  display: grid;
+  place-items: center;
+  opacity: 0.2;
+  perspective: 1200px;
+}
+
+.brand-mark-ring,
+.brand-mark-core {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.brand-mark-ring {
+  width: min(62vw, 42rem);
+  height: min(62vw, 42rem);
+  border: 1px solid rgba(102, 227, 255, 0.22);
+  box-shadow:
+    0 0 60px rgba(74, 185, 255, 0.12),
+    inset 0 0 40px rgba(137, 255, 203, 0.05);
+  animation: spinRing 22s linear infinite;
+}
+
+.brand-mark-core {
+  width: min(34vw, 18rem);
+  height: min(34vw, 18rem);
+  display: grid;
+  place-items: center;
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 800;
+  color: rgba(243, 247, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at 30% 30%, rgba(102, 227, 255, 0.16), rgba(9, 19, 33, 0.16));
+  backdrop-filter: blur(8px);
+  text-shadow: 0 0 30px rgba(102, 227, 255, 0.18);
+}
+
+.front-face {
+  animation: frontShift 8s ease-in-out infinite;
+}
+
+.side-face {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  letter-spacing: 0.08em;
+  transform: rotateY(90deg) scale(0.72);
+  opacity: 0;
+  animation: sideShift 8s ease-in-out infinite;
 }
 
 .orb-1 {
@@ -105,6 +156,19 @@ body::before {
   align-items: center;
   gap: 1rem;
   padding: 1rem 0 2rem;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 40;
+  padding: 0.95rem 1.1rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(8, 17, 32, 0.58);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
 }
 
 .brand {
@@ -398,6 +462,49 @@ span {
   transition-delay: 0.24s;
 }
 
+@keyframes spinRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes frontShift {
+  0%,
+  35% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+  50%,
+  85% {
+    opacity: 0;
+    transform: rotateY(-90deg) scale(0.76);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes sideShift {
+  0%,
+  35% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.72);
+  }
+  50%,
+  85% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.72);
+  }
+}
+
 @keyframes drift {
   0%,
   100% {
@@ -454,9 +561,18 @@ span {
   .hero {
     min-height: auto;
   }
+
+  .brand-mark {
+    opacity: 0.16;
+  }
 }
 
 @media (max-width: 640px) {
+  .sticky-nav {
+    border-radius: 24px;
+    top: 0.5rem;
+  }
+
   .nav {
     flex-direction: column;
     align-items: flex-start;
@@ -479,5 +595,9 @@ span {
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .brand-mark {
+    opacity: 0.14;
   }
 }
